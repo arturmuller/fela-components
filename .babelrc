@@ -1,3 +1,4 @@
 {
-  "presets": ["lusk"]
+  "presets": ["lusk"],
+  "plugins": ["transform-export-extensions"]
 }
