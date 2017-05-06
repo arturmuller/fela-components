@@ -1,0 +1,12 @@
+# Build artifacts
+cjs
+es6
+umd
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependencies
+node_modules
