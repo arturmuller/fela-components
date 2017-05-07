@@ -1,3 +1,15 @@
 # Fela Components
 
-This package is currently work in progress.
+## Install
+
+```sh
+# Using npm
+npm install --save fela-components
+
+# Using yarn
+yarn add fela-components
+```
+
+## Usage
+
+See [API reference for more detail](./docs/api-reference.md).
