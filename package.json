@@ -1,6 +1,6 @@
 {
   "name": "fela-components",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "React styling using components",
   "main": "cjs/index.js",
   "scripts": {
