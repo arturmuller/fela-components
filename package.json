@@ -29,10 +29,11 @@
     "prettier-eslint-cli": "^3.4.3"
   },
   "peerDependencies": {
-    "react": "^15.5.4"
+    "react": "^15.5.4",
+    "fela": "^5.0.0"
   },
   "dependencies": {
-    "fela-dom": "^4.3.5",
+    "fela-dom": "^5.0.4",
     "prop-types": "^15.5.8",
     "ramda": "^0.23.0"
   }
