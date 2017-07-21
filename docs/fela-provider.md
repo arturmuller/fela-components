@@ -3,15 +3,13 @@
 Provider is primarily required so that your nested `<Styled>` components get access to the renderer.
 
 ```js
-import Fela from "fela";
+import { createRenderer } from "fela";
 import { FelaProvider } from "fela-components";
 
-const renderer = Fela.createRenderer();
-const mountNode = document.getElementById("styles");
+const renderer = createRenderer();
 
 <FelaProvider
-  renderer={renderer}
-  mountNode={mountNode}>
+  renderer={renderer}>
   <Styled visual={{ color: "cornflowerblue" }}>
     This will be properly styled.
   </Styled>
@@ -22,10 +20,6 @@ const mountNode = document.getElementById("styles");
 
 An instance of Fela Renderer.
 
-## mountNode: DOM Node
-
-A DOM node into which styles should be rendered. Ordinarily, this would be a `style` tag.
-
 ## staticStyles: string
 
 A string representing static CSS that should be injected to the DOM as soon as the Provider mounts.
@@ -33,7 +27,6 @@ A string representing static CSS that should be injected to the DOM as soon as t
 ```js
 <FelaProvider
   renderer={renderer}
-  mountNode={mountNode}
   staticStyles="html {-webkit-font-smoothing: antialiased}">
   ...
 </FelaProvider>
@@ -46,7 +39,6 @@ An object containing arbitrary key/value pairs, made available to every `<Styled
 ```js
 <FelaProvider
   renderer={renderer}
-  mountNode={mountNode}
   theme={{ red: "#e04f82", green: "#53da92", blue: "#4f82dc"}}>
   ...
 </FelaProvider>
