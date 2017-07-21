@@ -32,18 +32,6 @@ A string representing static CSS that should be injected to the DOM as soon as t
 </FelaProvider>
 ```
 
-## theme: object
-
-An object containing arbitrary key/value pairs, made available to every `<Styled>` component nested lower in the hierarchy.
-
-```js
-<FelaProvider
-  renderer={renderer}
-  theme={{ red: "#e04f82", green: "#53da92", blue: "#4f82dc"}}>
-  ...
-</FelaProvider>
-```
-
 <!--
 ## `fonts`: array
 
