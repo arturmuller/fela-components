@@ -25,22 +25,19 @@ yarn add fela-components
 ```js
 import React from "react";
 import ReactDOM from "react-dom";
-import Fela from "fela";
+import { createRenderer } from "fela";
 import Styled, { FelaProvider } from "fela-components";
 
-const felaRenderer = Fela.createRenderer();
-const felaMountNode = document.getElementById("styles");
-const reactMountNode = document.getElementById("app");
+const renderer = createRenderer();
+const mountNode = document.getElementById("app");
 
 ReactDOM.render(
-  <FelaProvider
-    renderer={renderer}
-    mountNode={mountNode}>
+  <FelaProvider renderer={renderer}>
     <Styled visual={{ padding: "15px", color: "cornflowerblue" }}>
       This will be properly styled.
     </Styled>
   </FelaProvider>,
-  reactMountNode
+  mountNode
 )
 ```
 
