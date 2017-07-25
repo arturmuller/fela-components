@@ -4,6 +4,7 @@
   "description": "React styling using components",
   "main": "cjs/index.js",
   "scripts": {
+    "prepublish": "npm run build",
     "build": "babel ./lib --out-dir ./cjs",
     "dev": "babel ./lib --out-dir ./cjs --watch",
     "lint": "eslint lib",
