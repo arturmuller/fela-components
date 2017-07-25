@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders animations correctly 1`] = `
+<a
+  className="a b c d e"
+  href="http://www.facebook.com"
+>
+  Facebook
+</a>
+
+@-webkit-keyframes k1 {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@-moz-keyframes k1 {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes k1 {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.a { display: flex; }
+.b { align-items: center; }
+.c { animation-name: k1; }
+@media (min-width: 300px) {
+  .d { color: white; }
+}
+@media (min-width: 300px) and (min-width: 400px) {
+  .e { color: black; }
+}
+
+`;
+
+exports[`Renders styles correctly 1`] = `
+<a
+  className="a b"
+  href="http://www.facebook.com"
+>
+  Facebook
+</a>
+
+.a { display: flex; }
+.b { align-items: center; }
+
+`;

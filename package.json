@@ -7,7 +7,8 @@
     "build": "babel ./lib --out-dir ./cjs",
     "dev": "babel ./lib --out-dir ./cjs --watch",
     "lint": "eslint lib",
-    "format": "prettier-eslint './lib/**/*.js' --write"
+    "format": "prettier-eslint './lib/**/*.js' --write",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,13 @@
     "babel-preset-lusk": "^0.0.2",
     "eslint": "^3.19.0",
     "eslint-config-lusk": "^1.0.3",
-    "prettier-eslint-cli": "^3.4.3"
+    "eslint-plugin-jest": "^20.0.3",
+    "fela": "^5.0.4",
+    "jest": "^20.0.4",
+    "postcss": "^6.0.8",
+    "prettier-eslint-cli": "^3.4.3",
+    "react": "^15.6.1",
+    "react-test-renderer": "^15.6.1"
   },
   "peerDependencies": {
     "react": "^15.4.0",
