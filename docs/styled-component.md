@@ -3,11 +3,11 @@
 The primary component in `fela-components`.
 
 ```js
-import Styled from "fela-components"
+import { StyledComponent } from "fela-components"
 
-<Styled visual={{ padding: "10px" }}>
+<StyledComponent visual={{ padding: "10px" }}>
   Padded text!
-</Styled>
+</StyledComponent>
 ```
 
 ## visual: object
@@ -15,7 +15,8 @@ import Styled from "fela-components"
 A style object. These mostly contain style declarations, but Fela also offers pseudo-classes, media queries, and more. [Check out the docs](http://bit.ly/2qOK3i3).
 
 ```js
-<Styled visual={{
+<StyledComponent
+  visual={{
     padding: "10px",
     backgroundColor: "burlywood",
     "@media (min-width: 200px)": {
@@ -23,7 +24,7 @@ A style object. These mostly contain style declarations, but Fela also offers ps
     }
   }}>
   Padded text!
-</Styled>
+</StyledComponent>
 ```
 
 ## visual: function
@@ -31,21 +32,19 @@ A style object. These mostly contain style declarations, but Fela also offers ps
 A function returning a style object. The function will be passed `theme` and `animations` as named arguments and should return a style object.
 
 ```js
-<Styled visual={({ theme }) => ({
-    color: theme.blue,
-  })}>
+<StyledComponent visual={({ theme }) => ({ color: theme.blue })}>
   Theme-colored text...
-</Styled>
+</StyledComponent>
 ```
 
 ## use: string
 
-A string representing a native DOM element. This is useful if you want `<Styled>` to render other elements than `div` for accessibility or to utilise default browser behaviour. All props not consumed by `<StyledComponent>` will be passed to it.
+A string representing a native DOM element. This is useful if you want `<StyledComponent>` to render other elements than `div` for accessibility or to utilise default browser behaviour. All props not consumed by `<StyledComponent>` will be passed to it.
 
 ```js
-<Styled use="button" visual={{ backgroundColor: "blue" }}>
+<StyledComponent use="button" visual={{ backgroundColor: "blue" }}>
   Blue button
-</Styled>
+</StyledComponent>
 ```
 
 ## use: React Component
@@ -61,12 +60,12 @@ TODO: Create a gist of how you can foot-gun yourself when not accepting `classNa
 ```js
 import { Link } from "react-router-dom"
 
-<Styled
+<StyledComponent
   use={Link}
   visual={{ color: "salmon" }}
   to="/about">
   Pink link
-</Styled>
+</StyledComponent>
 ```
 
 ## animations: object
@@ -76,7 +75,7 @@ A map of animation names to animation objects. Will be used to generate unique a
 Compatible with [`react-animations`](http://bit.ly/2pSB8gi).
 
 ```js
-<Styled
+<StyledComponent
   visual={({ animations }) => ({
     color: "cadetblue",
     animationName: animations.fadeIn,
@@ -86,5 +85,5 @@ Compatible with [`react-animations`](http://bit.ly/2pSB8gi).
     fadeIn: { from: { opacity: 0 }, to: {opacity: 1 } },
   }}>
   Pink link
-</Styled>
+</StyledComponent>
 ```
