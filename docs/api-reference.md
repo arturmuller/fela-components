@@ -1,5 +1,5 @@
 # API Reference
 
 - [`<StyledComponent>`](./styled-component.md)
-- [`<FelaProvider>`](./fela-provider.md)
+- [`<Provider>`](./provider.md)
 - [`<ThemeProvider>`](./theme-provider.md)
